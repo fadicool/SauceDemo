@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -27,12 +28,13 @@ public class POMLoginStepDef {
 	
     //WebDriverManager.chromedriver().setup();
 	// Automatically sets up the driver AND returns a new ChromeDriver instance
-	WebDriver driver = WebDriverManager.chromedriver().create();
 	
-//	ChromeOptions options = new ChromeOptions();
+	
+	ChromeOptions options = new ChromeOptions();
 //	options.addArguments("--start-maximized");
 //	options.addArguments("--incognito");
 	
+	WebDriver driver = WebDriverManager.chromedriver().create();
 	//WebDriver driver = new ChromeDriver(options);
 	//WebDriver driver = new ChromeDriver();
 	
